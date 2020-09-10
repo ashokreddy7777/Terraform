@@ -1,5 +1,5 @@
 module "auto_scaling_group" {
-    source = "C:\\Users\\ashok\\a\\code\\i.code\\terraform\\modules\\auto_scaling_group"
+    source = "C:\\Users\\ashok\\a\\code\\i.code\\Terraform\\modules\\auto_scaling_group"
 
     
 
