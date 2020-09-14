@@ -1,10 +1,5 @@
-#provider "aws" {
-  #  profile = "ak"
-#    region = "us-east-1"
-#}
-
 module "vpc" {
-    source = "C:\\Users\\ashok\\a\\code\\i.code\\Terraform\\modules\\vpc"
+    source = "../../modules/vpc" 
 
     vpc_cidr_block             = "10.10.0.0/16"
     enable_dns_hostnames       = true

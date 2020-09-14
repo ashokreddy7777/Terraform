@@ -1,5 +1,5 @@
 module "load_balancer" {
-    source = "C:\\Users\\ashok\\a\\code\\i.code\\Terraform\\modules\\load_balancer"
+    source = "../../modules/load_balancer"
 
     name               = var.name
     load_balancer_type = "application"

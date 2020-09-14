@@ -1,8 +1,6 @@
-module "auto_scaling_group" {
-    source = "C:\\Users\\ashok\\a\\code\\i.code\\Terraform\\modules\\auto_scaling_group"
-
+module "auto_scaling_group" { 
+    source = "../../modules/auto_scaling_group"
     
-
     name                   = var.name 
     ami                    = "ami-0bd8b374b35f79386"
     instance_type          = "t2.micro"
