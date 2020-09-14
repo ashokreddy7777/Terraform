@@ -1,6 +1,6 @@
 provider "aws" {
     region  = var.region
-    profile = "ak"
+    profile = var.profile
 }  
 
  # Terraform remote state
