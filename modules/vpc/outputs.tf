@@ -18,23 +18,19 @@ output "pub_two_subnet_id" {
     value       = "${aws_subnet.pub_two.id}"
 }
 
-output "sg_id" {
-    description = "The id of the security group"
-    value       = "${aws_security_group.sg.id}"
+/*
+output "public_subnet_route_table_id" {
+    description = "The id of the public subnet route table"
+    value       = "aws_route_table.public_subnet_route_table.id"
 }
 
-#output "public_subnet_route_table_id" {
-#    description = "The id of the public subnet route table"
-#    value       = "aws_route_table.public_subnet_route_table.id"
-#}
+output "private_subnet_id" {
+    description = "The id of the private subnet"
+    value       = "aws_subnet.private.id"
+}
 
-#output "private_subnet_id" {
-#    description = "The id of the private subnet"
-#    value       = "aws_subnet.private.id"
-#}
-
-#output "private_subnet_route_table_id" {
-#    description = "The id of the private subnet route table"
-#    value       = "aws_route_table.private_subnet_route_table.id"
-#}
-
+output "private_subnet_route_table_id" {
+    description = "The id of the private subnet route table"
+    value       = "aws_route_table.private_subnet_route_table.id"
+}
+*/

@@ -82,8 +82,10 @@ variable "sg_tags" {
     default     = {}
 }
 
-#variable "private_subnet_route_table_tags" {
-#    description = "Additional tags for the Private subnet route table"
-#    type        = map(string)
-#    default     = {}
-#}
+/*
+variable "private_subnet_route_table_tags" {
+    description = "Additional tags for the Private subnet route table"
+    type        = map(string)
+    default     = {}
+}
+*/

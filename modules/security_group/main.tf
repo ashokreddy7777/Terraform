@@ -1,30 +1,38 @@
-#resource "aws_security_group" "load_balancer_sg" {
- #    name        = 
- #    description =
- #   vpc_id      = var.vpc_id
+resource "aws_security_group" "sg" {
+    name        = "instance-sg"
+    description = "sg for ec2 instances"
+    vpc_id      = var.vpc_id
 
-  # ingress {
-  #  description = "TLS from VPC"
-  #  from_port   = 443
-  #  to_port     = 443
-  #  protocol    = "tcp"
-  #  cidr_blocks = ["0.0.0.0/0"]
-  #}
+    ingress {
+    description = "HTTPS"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = var.sg_cidr_block
+  }
 
-  #ingress {
-  #  description = "TLS from VPC"
-  #  from_port   = 80
-  #  to_port     = 80
-  #  protocol    = "tcp"
-  #  cidr_blocks = ["0.0.0.0/0"]
-  #}
+  ingress {
+    description = "HTTP"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = var.sg_cidr_block
+  }
 
-  #egress {
-  #  from_port   = 0
-  #  to_port     = 0
-  #  protocol    = "-1"
-  #  cidr_blocks = ["0.0.0.0/0"]
-  #}
+  ingress {
+    description = "ashok"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["172.73.145.44/32"]
+  }
 
-  #tags = var.sg_tags
-#}
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = var.sg_tags 
+}
